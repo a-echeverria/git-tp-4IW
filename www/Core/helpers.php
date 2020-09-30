@@ -47,16 +47,6 @@ class View
     }
 
     /**
-     * @param $key
-     * @param $value
-     * Attribut a la vue une variable
-     */
-    public function assign($key, $value)
-    {
-        $this->data[$key] = $value;
-    }
-
-    /**
      * @param $modal
      * @param $data
      * @param null $editData
@@ -71,16 +61,3 @@ class View
         include "Views/modals/".$modal.".php";
     }
 
-    /**
-     * Destructeur
-     * Il crée les variables attribué grâce a la méthode assign
-     */
-    public function __destruct()
-    {
-        // $this->data = ["firstname"=>"yves"];
-        extract($this->data);
-        //$firstname = "yves";
-
-        include "Views/templates/".$this->template.".php" ;
-    }
-}
