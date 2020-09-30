@@ -13,12 +13,7 @@ class View
      * @param $view
      * @param string $template
      * Initialise la vue et le template
-     */
-    public function __construct($view, $template="back")
-    {
-        $this->setTemplate($template);
-        $this->setView($view);
-    }
+     
 
     /**
      * @param $t
